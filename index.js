@@ -1,9 +1,10 @@
 function askName() {
     let name;
-    name = prompt('Введите ваше имя');
+    name = document.querySelector('input').value;
     return name;
 }
 
 function showMessage() {
-    alert(`Привет, ${askName()}!`);
+    let div = document.querySelector('.message');
+    div.textContent = (`Привет, ${askName()}!`);
 }
